@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6426D681-9714-486A-906B-FC49A8572EF1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>MAGNUS</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\Lib\vs2015\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">obj\Release\MAGNUS\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">magnus</TargetName>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\Lib\vs2015\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">obj\Debug\MAGNUS\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">magnusd</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <AdditionalIncludeDirectories>..\..\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ProgramDataBaseFileName>$(OutDir)magnus.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)magnus.lib</OutputFile>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ProgramDataBaseFileName>$(OutDir)magnusd.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)magnusd.lib</OutputFile>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Include\Magnus\ControlList.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\Button.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\Canvas.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\CheckBox.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\ColorControls.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\ColorPicker.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\ComboBox.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\Control.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\Dragger.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\GroupBox.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\HorizontalScrollBar.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\HorizontalSlider.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\ImagePanel.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\Label.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\LabelClickable.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\Menu.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\MenuItem.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\NumericUpDown.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\RadioButton.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\RadioButtonManager.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\ScrollBar.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\ScrollButton.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\ScrollControl.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\ScrollThumb.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\Slider.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\TabButton.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\TabControl.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\TabStrip.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\Text.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\TextBox.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\ToggleControl.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\VerticalScrollBar.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\VerticalSlider.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\Window.h" />
+    <ClInclude Include="..\..\Include\Magnus\Controls\WindowButtons.h" />
+    <ClInclude Include="..\..\Include\Magnus\Events.h" />
+    <ClInclude Include="..\..\Include\Magnus\Font.h" />
+    <ClInclude Include="..\..\Include\Magnus\InputHandler.h" />
+    <ClInclude Include="..\..\Include\Magnus\Input\DirectInput.h" />
+    <ClInclude Include="..\..\Include\Magnus\Input\Windows.h" />
+    <ClInclude Include="..\..\Include\Magnus\Magnus.h" />
+    <ClInclude Include="..\..\Include\Magnus\Platform.h" />
+    <ClInclude Include="..\..\Include\Magnus\Renderer.h" />
+    <ClInclude Include="..\..\Include\Magnus\Renderers\DirectX9.h" />
+    <ClInclude Include="..\..\Include\Magnus\Renderers\OpenGL.h" />
+    <ClInclude Include="..\..\Include\Magnus\Skin.h" />
+    <ClInclude Include="..\..\Include\Magnus\Structures.h" />
+    <ClInclude Include="..\..\Include\Magnus\TextObject.h" />
+    <ClInclude Include="..\..\Include\Magnus\Texture.h" />
+    <ClInclude Include="..\..\Include\Magnus\Utility.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\ControlList.cpp" />
+    <ClCompile Include="..\..\Source\Controls\Button.cpp" />
+    <ClCompile Include="..\..\Source\Controls\Canvas.cpp" />
+    <ClCompile Include="..\..\Source\Controls\CheckBox.cpp" />
+    <ClCompile Include="..\..\Source\Controls\ColorControls.cpp" />
+    <ClCompile Include="..\..\Source\Controls\ColorPicker.cpp" />
+    <ClCompile Include="..\..\Source\Controls\ComboBox.cpp" />
+    <ClCompile Include="..\..\Source\Controls\Control.cpp" />
+    <ClCompile Include="..\..\Source\Controls\Dragger.cpp" />
+    <ClCompile Include="..\..\Source\Controls\GroupBox.cpp" />
+    <ClCompile Include="..\..\Source\Controls\HorizontalScrollBar.cpp" />
+    <ClCompile Include="..\..\Source\Controls\HorizontalSlider.cpp" />
+    <ClCompile Include="..\..\Source\Controls\Label.cpp" />
+    <ClCompile Include="..\..\Source\Controls\LabelClickable.cpp" />
+    <ClCompile Include="..\..\Source\Controls\Menu.cpp" />
+    <ClCompile Include="..\..\Source\Controls\MenuItem.cpp" />
+    <ClCompile Include="..\..\Source\Controls\NumericUpDown.cpp" />
+    <ClCompile Include="..\..\Source\Controls\RadioButton.cpp" />
+    <ClCompile Include="..\..\Source\Controls\RadioButtonManager.cpp" />
+    <ClCompile Include="..\..\Source\Controls\ScrollBar.cpp" />
+    <ClCompile Include="..\..\Source\Controls\ScrollButton.cpp" />
+    <ClCompile Include="..\..\Source\Controls\ScrollControl.cpp" />
+    <ClCompile Include="..\..\Source\Controls\Slider.cpp" />
+    <ClCompile Include="..\..\Source\Controls\ScrollThumb.cpp" />
+    <ClCompile Include="..\..\Source\Controls\TabButton.cpp" />
+    <ClCompile Include="..\..\Source\Controls\TabControl.cpp" />
+    <ClCompile Include="..\..\Source\Controls\TabStrip.cpp" />
+    <ClCompile Include="..\..\Source\Controls\Text.cpp" />
+    <ClCompile Include="..\..\Source\Controls\TextBox.cpp" />
+    <ClCompile Include="..\..\Source\Controls\ToggleControl.cpp" />
+    <ClCompile Include="..\..\Source\Controls\VerticalScrollBar.cpp" />
+    <ClCompile Include="..\..\Source\Controls\VerticalSlider.cpp" />
+    <ClCompile Include="..\..\Source\Controls\Window.cpp" />
+    <ClCompile Include="..\..\Source\Events.cpp" />
+    <ClCompile Include="..\..\Source\InputHandler.cpp" />
+    <ClCompile Include="..\..\Source\Magnus.cpp" />
+    <ClCompile Include="..\..\Source\Platforms\Windows.cpp" />
+    <ClCompile Include="..\..\Source\Renderer.cpp" />
+    <ClCompile Include="..\..\Source\Skin.cpp" />
+    <ClCompile Include="..\..\Source\Utility.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

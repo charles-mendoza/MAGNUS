@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Include\Magnus">
+      <UniqueIdentifier>{d44621ec-5fa4-4d5f-a264-fdd4e3375fb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\Magnus\Renderers">
+      <UniqueIdentifier>{05a68bf8-9b06-4b84-b249-99f4ca36dd98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Include\Magnus\Controls">
+      <UniqueIdentifier>{3cf1f678-b9a3-480a-9b7c-5641c0edf458}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\Magnus\Input">
+      <UniqueIdentifier>{b623b81f-4801-4f7f-84e7-ecee9529ec3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Controls">
+      <UniqueIdentifier>{bf7a24e8-f81d-432c-b0d9-846ef449f00b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Platforms">
+      <UniqueIdentifier>{389e446b-ccb0-4a90-bd1e-a310b36d1d57}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Include\Magnus\Renderer.h">
+      <Filter>Include\Magnus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Renderers\DirectX9.h">
+      <Filter>Include\Magnus\Renderers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Structures.h">
+      <Filter>Include\Magnus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Font.h">
+      <Filter>Include\Magnus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Skin.h">
+      <Filter>Include\Magnus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\InputHandler.h">
+      <Filter>Include\Magnus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Magnus.h">
+      <Filter>Include\Magnus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\Control.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Texture.h">
+      <Filter>Include\Magnus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\Canvas.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Input\Windows.h">
+      <Filter>Include\Magnus\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\Dragger.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\ControlList.h">
+      <Filter>Include\Magnus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Events.h">
+      <Filter>Include\Magnus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Utility.h">
+      <Filter>Include\Magnus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Platform.h">
+      <Filter>Include\Magnus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\TextObject.h">
+      <Filter>Include\Magnus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\Slider.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\Button.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\Label.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\Text.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\ImagePanel.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\CheckBox.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\LabelClickable.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\GroupBox.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\RadioButton.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\RadioButtonManager.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\HorizontalSlider.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\VerticalSlider.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\TextBox.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\NumericUpDown.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\Window.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\TabControl.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\TabButton.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\TabStrip.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls.h">
+      <Filter>Include\Magnus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\ScrollBar.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\MenuItem.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\Menu.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\ScrollControl.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\HorizontalScrollBar.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\VerticalScrollBar.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\ComboBox.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\ColorPicker.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\ColorControls.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\ScrollButton.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\ScrollThumb.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\WindowButtons.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Controls\ToggleControl.h">
+      <Filter>Include\Magnus\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Input\DirectInput.h">
+      <Filter>Include\Magnus\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Magnus\Renderers\OpenGL.h">
+      <Filter>Include\Magnus\Renderers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\Renderer.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Skin.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\InputHandler.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\Control.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\Canvas.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Magnus.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\Dragger.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ControlList.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Events.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Utility.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Platforms\Windows.cpp">
+      <Filter>Source\Platforms</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\Slider.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\Label.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\Button.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\LabelClickable.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\GroupBox.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\RadioButton.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\RadioButtonManager.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\NumericUpDown.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\Window.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\TabStrip.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\TabButton.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\TabControl.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\ScrollBar.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\ScrollControl.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\HorizontalScrollBar.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\VerticalScrollBar.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\Menu.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\MenuItem.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\ComboBox.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\ColorPicker.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\ColorControls.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\ScrollThumb.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\ScrollButton.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\ToggleControl.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\CheckBox.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\HorizontalSlider.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\TextBox.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\VerticalSlider.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Controls\Text.cpp">
+      <Filter>Source\Controls</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
