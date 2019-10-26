@@ -72,9 +72,18 @@ namespace Magnus
 			return strOut;
 		}
 
-		inline float PercentToDec(float percent, float min, float max, bool reverse = false)
+		inline float DecToPercent(float dec, float min, float max)
 		{
-			if (reverse) { return ((min + max) - (percent * (max - min) * 0.01f) - min); }
+			if (max < min)
+				return 100.0f - ((dec - max) * 100.0f) / (min - max);
+
+			return ((dec - min) * 100.0f) / (max - min);
+		}
+
+		inline float PercentToDec(float percent, float min, float max)
+		{
+			if (max < min)
+				return ((min + max) - (percent * (min - max) * 0.01f) - max);
 
 			return (((percent * (max - min)) * 0.01f) + min);
 		}
