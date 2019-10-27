@@ -46,7 +46,8 @@ namespace Magnus
 			// Efficient and faster implementation of ID3DXLine::Draw.
 			void Draw(Magnus::Vector2* pVertexList, float fWidth, int iVertexCount, bool bClosedShape = false);
 			void DrawLine(Magnus::Vector2 p1, Magnus::Vector2 p2, float fWidth);
-			void DrawCircle(Magnus::Vector2 pCenter, float fRadius, int iSides, float fWidth, int iSpacing = 0);
+			void DrawCircle(Magnus::Vector2 pCenter, float fRadius, float fWidth, int iSides = 360, int iSpacing = 0);
+			void DrawFilledCircle(Magnus::Vector2 pCenter, float fRadius, int iSides = 360);
 
 			Magnus::Rect GetClientBounds();
 

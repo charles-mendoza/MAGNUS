@@ -240,20 +240,17 @@ namespace Magnus
 					b = p1 + n0 * fWidth;
 					m_pLineVerts[iCurVert++] = { a.x, a.y, 1.0f, 1.0f, m_Color };
 					m_pLineVerts[iCurVert++] = { b.x, b.y, 1.0f, 1.0f, m_Color };
-					//m_pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, iCurVert - 2, &m_LineVerts, sizeof(VertexFormat));
-					//iCurVert = 0;
 					a = p1 - n1 * fWidth;
 					b = p1 + n1 * fWidth;
-					m_pLineVerts[iCurVert++] = { a.x, a.y, 1.0f, 1.0f, m_Color };
-					m_pLineVerts[iCurVert++] = { b.x, b.y, 1.0f, 1.0f, m_Color };
 				}
 				else
 				{
 					a = p1 - miter * length;
 					b = p1 + miter * length;
-					m_pLineVerts[iCurVert++] = { a.x, a.y, 1.0f, 1.0f, m_Color };
-					m_pLineVerts[iCurVert++] = { b.x, b.y, 1.0f, 1.0f, m_Color };
 				}
+
+				m_pLineVerts[iCurVert++] = { a.x, a.y, 1.0f, 1.0f, m_Color };
+				m_pLineVerts[iCurVert++] = { b.x, b.y, 1.0f, 1.0f, m_Color };
 
 				if (!bClosedShape && i == iVertexCount - 2)
 				{
@@ -316,7 +313,7 @@ namespace Magnus
 			Draw(line, fWidth, 2, false);
 		}
 
-		void DirectX9::DrawCircle(Magnus::Vector2 pCenter, float fRadius, int iSides, float fWidth, int iSpacing)
+		void DirectX9::DrawCircle(Magnus::Vector2 pCenter, float fRadius, float fWidth, int iSides, int iSpacing)
 		{
 			if (iSpacing == iSides) { return; }
 
@@ -356,6 +353,31 @@ namespace Magnus
 			
 			if (iSpacing <= 0)
 				Draw(circle, fWidth, iSides, true);
+		}
+
+		void DirectX9::DrawFilledCircle(Magnus::Vector2 pCenter, float fRadius, int iSides)
+		{
+			iSides = Utility::Clamp(iSides, 2, 360);
+
+			float angle = D3DX_PI * 2 / iSides;
+			float _cos = cos(angle);
+			float _sin = sin(angle);
+			float x1 = fRadius, y1 = 0, x2, y2;
+
+			Vertex circle[360];
+
+			for (int i = 0; i < iSides; i++)
+			{
+				x2 = _cos * x1 - _sin * y1 + pCenter.x;
+				y2 = _sin * x1 + _cos * y1 + pCenter.y;
+				x1 += pCenter.x;
+				y1 += pCenter.y;
+				circle[i] = { x1, y1, 1.0f, 1.0f, m_Color };
+				x1 = x2 - pCenter.x;
+				y1 = y2 - pCenter.y;
+			}
+			
+			m_pDevice->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, iSides - 1, &circle, sizeof(Vertex));
 		}
 
 		void DirectX9::SetDrawColor(Color color)

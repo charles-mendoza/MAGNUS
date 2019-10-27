@@ -80,7 +80,8 @@ namespace Magnus
 
 			virtual void Draw(Magnus::Vector2* pVertexList, float fWidth, int iVertexCount, bool bClosedShape = false) {}
 			virtual void DrawLine(Magnus::Vector2 p1, Magnus::Vector2 p2, float fWidth) {}
-			virtual void DrawCircle(Magnus::Vector2 pCenter, float fRadius, int iSides, float fWidth, int iSpacing = 0) {}
+			virtual void DrawCircle(Magnus::Vector2 pCenter, float fRadius, float fWidth, int iSides = 360, int iSpacing = 0) {}
+			virtual void DrawFilledCircle(Magnus::Vector2 pCenter, float fRadius, int iSides = 360) {}
 
 			virtual Magnus::Rect GetClientBounds() { return Magnus::Rect(0, 0, 10000, 10000); }
 
